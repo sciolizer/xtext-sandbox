@@ -9,7 +9,6 @@ import org.eclipse.xtext.junit4.InjectWith;
 import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.junit4.util.ParseHelper;
 import org.eclipse.xtext.xbase.lib.Exceptions;
-import org.example.domainmodel.domainmodel.Domainmodel;
 import org.example.domainmodel.tests.DomainmodelInjectorProvider;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,7 +19,7 @@ import org.junit.runner.RunWith;
 @SuppressWarnings("all")
 public class DomainmodelParsingTest {
   @Inject
-  private ParseHelper<Domainmodel> parseHelper;
+  private /* ParseHelper<Domainmodel> */Object parseHelper;
   
   @Test
   public void loadModel() {

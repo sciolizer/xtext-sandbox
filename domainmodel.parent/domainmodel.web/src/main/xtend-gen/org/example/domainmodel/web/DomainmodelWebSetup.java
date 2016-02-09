@@ -3,16 +3,11 @@
  */
 package org.example.domainmodel.web;
 
-import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.google.inject.Module;
 import com.google.inject.Provider;
-import com.google.inject.util.Modules;
 import java.util.concurrent.ExecutorService;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
-import org.example.domainmodel.DomainmodelRuntimeModule;
 import org.example.domainmodel.DomainmodelStandaloneSetup;
-import org.example.domainmodel.web.DomainmodelWebModule;
 
 /**
  * Initialization support for running Xtext languages in web applications.
@@ -24,11 +19,8 @@ public class DomainmodelWebSetup extends DomainmodelStandaloneSetup {
   
   @Override
   public Injector createInjector() {
-    final DomainmodelRuntimeModule runtimeModule = new DomainmodelRuntimeModule();
-    final DomainmodelWebModule webModule = new DomainmodelWebModule(this.executorServiceProvider);
-    Modules.OverriddenModuleBuilder _override = Modules.override(runtimeModule);
-    Module _with = _override.with(webModule);
-    return Guice.createInjector(_with);
+    throw new Error("Unresolved compilation problems:"
+      + "\nType mismatch: cannot convert from DomainmodelRuntimeModule to Iterable<? extends Module>");
   }
   
   public DomainmodelWebSetup(final Provider<ExecutorService> executorServiceProvider) {

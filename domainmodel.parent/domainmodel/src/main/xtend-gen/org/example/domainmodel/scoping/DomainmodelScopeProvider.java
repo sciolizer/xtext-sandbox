@@ -3,8 +3,6 @@
  */
 package org.example.domainmodel.scoping;
 
-import org.example.domainmodel.scoping.AbstractDomainmodelScopeProvider;
-
 /**
  * This class contains custom scoping description.
  * 
@@ -12,5 +10,5 @@ import org.example.domainmodel.scoping.AbstractDomainmodelScopeProvider;
  * on how and when to use it.
  */
 @SuppressWarnings("all")
-public class DomainmodelScopeProvider extends AbstractDomainmodelScopeProvider {
+public class DomainmodelScopeProvider /* implements AbstractDomainmodelScopeProvider  */{
 }

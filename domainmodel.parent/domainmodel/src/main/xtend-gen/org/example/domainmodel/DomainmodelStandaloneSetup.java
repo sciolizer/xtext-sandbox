@@ -3,15 +3,13 @@
  */
 package org.example.domainmodel;
 
-import org.example.domainmodel.DomainmodelStandaloneSetupGenerated;
-
 /**
  * Initialization support for running Xtext languages without Equinox extension registry.
  */
 @SuppressWarnings("all")
-public class DomainmodelStandaloneSetup extends DomainmodelStandaloneSetupGenerated {
+public class DomainmodelStandaloneSetup /* implements DomainmodelStandaloneSetupGenerated  */{
   public static void doSetup() {
-    DomainmodelStandaloneSetup _domainmodelStandaloneSetup = new DomainmodelStandaloneSetup();
-    _domainmodelStandaloneSetup.createInjectorAndDoEMFRegistration();
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method createInjectorAndDoEMFRegistration() is undefined for the type DomainmodelStandaloneSetup");
   }
 }

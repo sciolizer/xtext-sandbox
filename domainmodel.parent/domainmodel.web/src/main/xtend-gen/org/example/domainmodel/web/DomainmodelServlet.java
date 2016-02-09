@@ -3,18 +3,12 @@
  */
 package org.example.domainmodel.web;
 
-import com.google.inject.Provider;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 import javax.servlet.annotation.WebServlet;
 import org.eclipse.xtext.web.servlet.XtextServlet;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
-import org.eclipse.xtext.xbase.lib.Exceptions;
-import org.eclipse.xtext.xbase.lib.ObjectExtensions;
-import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
-import org.example.domainmodel.web.DomainmodelWebSetup;
 
 /**
  * Deploy this class into a servlet container to enable DSL-specific services.
@@ -26,27 +20,8 @@ public class DomainmodelServlet extends XtextServlet {
   
   @Override
   public void init() {
-    try {
-      super.init();
-      final Provider<ExecutorService> _function = new Provider<ExecutorService>() {
-        @Override
-        public ExecutorService get() {
-          ExecutorService _newCachedThreadPool = Executors.newCachedThreadPool();
-          final Procedure1<ExecutorService> _function = new Procedure1<ExecutorService>() {
-            @Override
-            public void apply(final ExecutorService it) {
-              DomainmodelServlet.this.executorServices.add(it);
-            }
-          };
-          return ObjectExtensions.<ExecutorService>operator_doubleArrow(_newCachedThreadPool, _function);
-        }
-      };
-      final Provider<ExecutorService> executorServiceProvider = _function;
-      DomainmodelWebSetup _domainmodelWebSetup = new DomainmodelWebSetup(executorServiceProvider);
-      _domainmodelWebSetup.createInjectorAndDoEMFRegistration();
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method createInjectorAndDoEMFRegistration() is undefined for the type DomainmodelWebSetup");
   }
   
   @Override

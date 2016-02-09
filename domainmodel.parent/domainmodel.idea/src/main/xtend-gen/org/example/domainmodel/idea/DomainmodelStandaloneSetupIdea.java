@@ -3,21 +3,13 @@
  */
 package org.example.domainmodel.idea;
 
-import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.google.inject.Module;
-import org.eclipse.xtext.util.Modules2;
-import org.example.domainmodel.DomainmodelRuntimeModule;
-import org.example.domainmodel.DomainmodelStandaloneSetupGenerated;
-import org.example.domainmodel.idea.DomainmodelIdeaModule;
 
 @SuppressWarnings("all")
-public class DomainmodelStandaloneSetupIdea extends DomainmodelStandaloneSetupGenerated {
+public class DomainmodelStandaloneSetupIdea /* implements DomainmodelStandaloneSetupGenerated  */{
   @Override
   public Injector createInjector() {
-    final DomainmodelRuntimeModule runtimeModule = new DomainmodelRuntimeModule();
-    final DomainmodelIdeaModule ideaModule = new DomainmodelIdeaModule();
-    final Module mergedModule = Modules2.mixin(runtimeModule, ideaModule);
-    return Guice.createInjector(mergedModule);
+    throw new Error("Unresolved compilation problems:"
+      + "\nType mismatch: cannot convert from DomainmodelRuntimeModule to Module");
   }
 }
