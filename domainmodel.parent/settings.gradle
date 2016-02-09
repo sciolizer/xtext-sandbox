@@ -1,0 +1,4 @@
+include 'domainmodel'
+include 'domainmodel.ide'
+include 'domainmodel.idea'
+include 'domainmodel.web'
